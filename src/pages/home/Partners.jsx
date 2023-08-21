@@ -8,26 +8,28 @@ const Partners = () => {
   
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    //responsive
+let mm = gsap.matchMedia();
 
     const context = gsap.context(() => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: "#partners",
-          start: window.innerWidth > 1024 ? "top top" : "20% 20%",
-          end: "+=3000px",
-          pin: true,
+          start: window.innerWidth > 800 ? "top top" : "20% 20%",
+          end: window.innerWidth > 800 ? "+=2000px" : "+=100px",
+          pin: window.innerWidth > 800 ? true : false,
           scrub: 1,
           pinSpacing: true,
-          markers: true,
+          //markers: true,
           onEnter: () => timeline.to(partner, {
             frame: frameCount - 1,
             snap: "frame",
             ease: "none",
             scrollTrigger: {
               trigger: ".canvas-container-partner",
-              start: "top top",
+              start: window.innerWidth > 800 ? "top top" : "top bottom",
               //once: true,
-              markers: true,
+              //markers: true,
               scrub: 1,
             },
             onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
@@ -68,20 +70,25 @@ const Partners = () => {
     images.push(img);
   }
   
-    timeline.set( "#partners-intro", { top: -400, position:"absolute"});
     const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pintext-partners",
-        start: window.innerWidth > 1024 ? "top bottom" : "20% 20%",
+        start: window.innerWidth > 1024 ? "top bottom" :"top bottom" ,
         end: "+=1000px",
         pin: false,
         scrub: true,
         pinSpacing: false,
-        markers: true,
+        //markers: true,
         id:"pintext",
-        onEnter: () => timeline2.to(
+        onEnter: () => 
+        
+         mm.add("(min-width: 800px)", () => {
+          timeline.set( "#partners-intro", { top: -400, position:"absolute"});
+        timeline2.to(
+          
           "#partners-intro", { top: 150,  position:"absolute"}, {duration:5}
         )
+      })
       }
   }) 
   
@@ -109,12 +116,13 @@ let render = images[0].onload = () => {
   
   // When drawing the image, we have to scale down the image
   // width and height in order to fit within the canvas
-  //context.drawImage(img, x, y, newWidth, newHeight);
+  context.drawImage(img, x, y, newWidth, newHeight);
 
-  var ratio = img.naturalWidth / img.naturalHeight;
+  /* var ratio = img.naturalWidth / img.naturalHeight;
 var width = canvas.width;
 var height = width / ratio;
-context.drawImage(img, 0, 0, width, height);
+context.drawImage(img, 0, 0, width, height);  */
+
 };
 
 // Now that we have set up the image "onload" handeler, we can assign

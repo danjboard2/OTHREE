@@ -2,7 +2,7 @@ const Tokenomics = () => {
   return (
     <section
       id="tokenomics"
-      className="wrapper bg-tokenomics bg-cover bg-no-repeat py-6 sm:py-16"
+      className="wrapper bg-cover bg-no-repeat py-6 sm:py-16"
     >
       <div className="w-[90%] lg:flex-row flex-col max-w-[1400px] flex justify-between items-center lg:items-start gap-10">
         <div className="flex  justify-start items-center text-center lg:text-left lg:items-start flex-col gap-3 sm:gap-5">
@@ -13,8 +13,8 @@ const Tokenomics = () => {
             Total supply <br /> <span className="font-normal">150,000,000</span>
           </p>
         </div>
-        <img
-          src="/chart.png"
+       <img
+          src="/pie-chart.png"
           className="w-full max-w-[600px] xl:max-w-[800px] 2xl:max-w-[1000px] object-contain"
           alt=""
         />

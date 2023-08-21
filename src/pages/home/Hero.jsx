@@ -3,7 +3,7 @@ const Hero = () => {
     <section className="wrapper bg-hero h-screen bg-no-repeat lg:h-[calc(100vh_-_125px)] min-h-[450px] lg:min-h-[650px] bg-cover bg-right">
       <div className="flex justify-center h-full lg:pt-0 pt-[140px] items-start flex-col gap-8 md:gap-12 w-[90%] max-w-[1400px]">
         <div className="flex max-h-[182px] justify-start items-stretch gap-5">
-          <h3 className="font-bold leading-[0.75] font-agency text-[150px] md:text-[232px] text-white">
+          <h3 className="font-bold leading-[0.75] font-agency text-[100px] md:text-[232px] text-white">
             <span className="text-primary">0</span>3
           </h3>
           <div className="w-2 bg-white"></div>
@@ -19,10 +19,8 @@ const Hero = () => {
             </h4>
           </div>
         </div>
-        <p className="max-w-[600px] font-normal text-white text-lg md:text-2xl">
-          <span className="text-primary">0</span>3: Reshaping Finance, Restoring
-          the Earth with the Leading Re-Fi Innovations, Restoring the Earth with
-          the Leading Re-Fi Innovations
+        <p className="max-w-[500px] font-normal text-white text-lg md:text-2xl">
+        Restoring the Earth, Reshaping Finance, and Pioneering Re-Fi Innovations
         </p>
       </div>
     </section>

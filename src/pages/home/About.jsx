@@ -8,26 +8,29 @@ const About = () => {
   
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+//responsive
+let mm = gsap.matchMedia();
 
     const context = gsap.context(() => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: "#about",
-          start: window.innerWidth > 1024 ? "top top" : "20% 20%",
-          end: "+=2000px",
-          pin: true,
-          scrub: 1,
+          start: window.innerWidth > 800 ? "top top" : "top bottom" ,
+          end: window.innerWidth > 800 ? "+=2000px" : "+=100px",
+          pin: window.innerWidth > 800 ? true : false,
+          scrub:1,
           pinSpacing: true,
-          markers: true,
-          onEnter: () => timeline.to(bulb, {
+         //markers: true,
+          onEnter: () => 
+          timeline.to(bulb, {
             frame: frameCount - 1,
             snap: "frame",
             ease: "none",
             scrollTrigger: {
               trigger: ".canvas-container",
-              start: "top top",
+              start: window.innerWidth > 800 ? "top top" : "top bottom",
               //once: true,
-              markers: true,
+             // markers: true,
               scrub: 1,
             },
             onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
@@ -70,7 +73,7 @@ const About = () => {
   
 
   
-    timeline.set( "#intro", { top: "-20%", position:"absolute"});
+  
     const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pintext",
@@ -79,11 +82,15 @@ const About = () => {
         pin: false,
         scrub: true,
         pinSpacing: false,
-        markers: true,
+        //markers: true,
         id:"pintext",
-        onEnter: () => timeline2.to(
-          "#intro", { top: "30%",  position:"absolute"}, {duration:5}
+        onEnter: () => 
+        mm.add("(min-width: 800px)", () => {
+          timeline.set( "#intro", { top: -400, position:"absolute"});
+        timeline2.to(
+          "#intro", { top: 150,  position:"absolute"}, {duration:5}
         )
+        })
       }
   }) 
   
@@ -149,12 +156,12 @@ function render() {
     <>
     <div id="pintext"></div>
     <section id="about" className="wrapper overflow-hidden">
-      <div className="grid place-items-center xl:gap-0 gap-10  w-full grid-cols-1 xl:grid-cols-2 lg:h-[100vh] 2xl:max-w-[1600px]">
-        <div  className="flex px-4 sm:px-8  justify-center items-center w-full pt-8 sm:pt-14 pb-0 xl:py-14 lg:bg-white">
+      <div className="grid place-items-center xl:gap-0 gap-10 h-[100vh] w-full grid-cols-1 xl:grid-cols-2 lg:h-[100vh] 2xl:max-w-[1600px]">
+        <div  className="flex px-4 sm:px-8  justify-center items-center w-full pt-10 sm:pt-14 pb-0 xl:py-14 lg:bg-white">
           <div id="intro" className="flex justify-start items-start flex-col gap-5">
-            <h3 className="text-black font-agency font-bold text-[40px] md:text-[50px] 2xl:text-[60px] uppercase xl:max-w-[531px]">
+            <h3 className="text-black font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[531px]">
               "Leading the path to a{" "}
-              <span className="text-primary">brighter</span> future with
+              <span className="text-primary ">brighter</span> future with
               Regenerative Finance"
             </h3>
             <div className="w-full max-w-[600px] xl:max-w-[412px] bg-primary h-2"></div>
@@ -175,7 +182,7 @@ function render() {
             </p>
           </div>
         </div>
-        <div id="aboutimage" className="canvas-container xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden bg-black">
+        <div id="aboutimage" className="canvas-container h-[400px] xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden bg-black">
             <canvas id="hero-lightpass" />
       </div>
       </div>

@@ -81,7 +81,7 @@ const Info = () => {
 
     "insurance fund": {
       heading: "Insurance Fund",
-      desc: "The O3 Insurance Fund is designed with the principal aim of protecting our invested community of lenders from any unforeseen contractual defaults. We place paramount value on the security and transparency of our operations. Every lending funneled towards the listed projects that have successfully navigated through our multi-layered due diligence process is enveloped in the safety net of this fund..",
+      desc: "The O3 Insurance Fund is designed with the principal aim of protecting our invested community of lenders from any unforeseen contractual defaults. We place paramount value on the security and transparency of our operations. Every lending funneled towards the listed projects that have successfully navigated through our multi-layered due diligence process is enveloped in the safety net of this fund.",
       url: "#",
       img: "/insurance-info.png",
     },
@@ -130,7 +130,7 @@ const Tab = ({ img, name, handleFunction, activeTab }) => {
           alt=""
         />
       </div>
-      <p className="text-black font-normal text-base sm:text-xl">
+      <p className="text-black font-bold text-base sm:text-xl">
         <span className="text-primary">0</span>3 {name}
       </p>
     </button>

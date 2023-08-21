@@ -70,7 +70,7 @@ const Box = () => {
                     Real estate
                   </li>
                   <li className="text-lg sm:text-xl font-normal text-black">
-                    Commercial Residential
+                    Commercial residential
                   </li>
                   <li className="text-lg sm:text-xl font-normal text-black">
                     Engineering firms

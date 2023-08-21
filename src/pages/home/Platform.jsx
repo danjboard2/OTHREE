@@ -8,35 +8,37 @@ const Platform = () => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    let mm = gsap.matchMedia();
+    
     const context = gsap.context(() => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: "#ecosystem",
-          start: window.innerWidth > 1024 ? "top top" : "20% 20%",
+          start: window.innerWidth > 800 ? "top top" : "20% 20%",
           end: "+=3000px",
-          pin: true,
+          pin: window.innerWidth > 800 ? true : false,
           scrub: 1,
           pinSpacing: true,
-          markers: true,
+        //  markers: true,
         }
     })
     const timeline3 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pin-eco",
-        start: window.innerWidth > 1024 ? "top top" : "20% 20%",
-        end: "+=3000px",
-        pin: false,
+        start: window.innerWidth > 800 ? "top top" : "20% 20%",
+        end: window.innerWidth > 800 ? "+=2000px" : "+=100px",
+        pin: window.innerWidth > 800 ? true : false,
         scrub: 1,
         pinSpacing: false,
-        markers: true,
+       // markers: true,
         onEnter: () => timeline3.to(ecosystem, {
           frame: frameCount - 1,
           snap: "frame",
           ease: "none",
           scrollTrigger: {
             trigger: ".canvas-container-ecosystem",
-            start: "top top",
-            markers: true,
+            start: window.innerWidth > 800 ? "top top" : "top bottom",
+           //markers: true,
             //once: true,
             scrub: 1,
           },
@@ -79,20 +81,23 @@ const Platform = () => {
     images.push(img);
   }
   
-    timeline.set( "#eco-intro", { top: -400, position:"absolute"});
     const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pin-eco",
-        start: window.innerWidth > 1024 ? "top bottom" : "20% 20%",
+        start: window.innerWidth > 1024 ? "top bottom" :"top bottom" ,
         end: "+=1000px",
         pin: false,
         scrub: true,
         pinSpacing: false,
-        markers: true,
+        //markers: true,
         id:"pintext",
-        onEnter: () => timeline2.to(
+        onEnter: () =>
+        mm.add("(min-width: 800px)", () => {
+          timeline.set( "#eco-intro", { top: -400, position:"absolute"});
+        timeline2.to(
           "#eco-intro", { top: 150,  position:"absolute"}, {duration:5}
         )
+      })
       }
   }) 
   
@@ -119,14 +124,17 @@ const Platform = () => {
     
     // When drawing the image, we have to scale down the image
     // width and height in order to fit within the canvas
-    //context.drawImage(img, x, y, newWidth, newHeight);
-/*   context.drawImage(img, 0, 0, img.width,    img.height,     // source rectangle
-                   0, 0, canvas.width, canvas.height);  */ // destination rectangle
-
-var ratio = img.naturalWidth / img.naturalHeight;
+    context.drawImage(img, x, y, newWidth, newHeight);
+ // context.drawImage(img, 0, 0, img.width,    img.height,     // source rectangle
+            //       0, 0, canvas.width, canvas.height);  // destination rectangle
+/*ratio = img.naturalWidth / img.naturalHeight;
 var width = canvas.width;
 var height = width / ratio;
-context.drawImage(img, 0, 0, width, height);
+context.drawImage(img, 0, 0, width, height); */
+/*
+context.translate(canvas.width/2,canvas.height/2);
+context.drawImage(img,-img.width/2,-img.height/2);
+context.translate(-canvas.width/2,-canvas.height/2); */
   };
   
   // Now that we have set up the image "onload" handeler, we can assign
@@ -159,7 +167,7 @@ context.drawImage(img, 0, 0, width, height);
       <div className="grid  items-stretch place-items-center h-[100vh]  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
         <div className="flex px-4  sm:px-8 bg-[#334B08] justify-center items-center w-full py-8 sm:py-14 xl:py-14">
           <div  id="eco-intro" className="flex justify-start items-start flex-col gap-5">
-            <h3 className="text-white font-agency font-bold text-[40px] md:text-[50px] 2xl:text-[60px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
+            <h3 className="text-white font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
               An <span className="text-primary">all-in-one</span> ReFi Platform
               for Sustainable Lending & Governance.
             </h3>
