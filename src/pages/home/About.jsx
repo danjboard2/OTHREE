@@ -70,7 +70,7 @@ const About = () => {
   
 
   
-    timeline.set( "#intro", { top: -400, position:"absolute"});
+    timeline.set( "#intro", { top: "-20%", position:"absolute"});
     const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pintext",
@@ -82,7 +82,7 @@ const About = () => {
         markers: true,
         id:"pintext",
         onEnter: () => timeline2.to(
-          "#intro", { top: 150,  position:"absolute"}, {duration:5}
+          "#intro", { top: "30%",  position:"absolute"}, {duration:5}
         )
       }
   }) 
@@ -113,10 +113,14 @@ let render = images[0].onload = () => {
   // width and height in order to fit within the canvas
   //context.drawImage(img, x, y, newWidth, newHeight);
 
-  var ratio = img.naturalWidth / img.naturalHeight;
-var width = canvas.width;
-var height = width / ratio;
-context.drawImage(img, 0, 0, width, height);
+//  var ratio = img.naturalWidth / img.naturalHeight;
+//var width = canvas.width;
+//var height = width / ratio;
+//context.drawImage(img, 0, 0, width, height);
+
+context.translate(canvas.width/2,canvas.height/2);
+context.drawImage(img,-img.width/2,-img.height/2);
+context.translate(-canvas.width/2,-canvas.height/2);
 };
 
 // Now that we have set up the image "onload" handeler, we can assign
@@ -171,7 +175,7 @@ function render() {
             </p>
           </div>
         </div>
-        <div id="aboutimage" className="canvas-container xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
+        <div id="aboutimage" className="canvas-container xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden bg-black">
             <canvas id="hero-lightpass" />
       </div>
       </div>
