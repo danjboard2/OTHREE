@@ -37,10 +37,17 @@ const Partners = () => {
       // images 
 
   const canvas = document.getElementById("hero-partner");
+  fitToContainer(canvas);
+  
+  function fitToContainer(canvas){
+    // Make it visually fill the positioned parent
+    canvas.style.width ='100%';
+    canvas.style.height='100%';
+    // ...then set the internal size to match
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
   const context = canvas.getContext("2d");
-
-  canvas.width = 800;
-  canvas.height = window.innerHeight;
 
   const frameCount =210;
   const currentFrame = (index) =>
@@ -79,12 +86,41 @@ const Partners = () => {
   }) 
   
 
-images[0].onload = render;
+//images[0].onload = render;
 
+let render = images[0].onload = () => {
+  let img = images[partner.frame];
+  // Once the image is loaded, we will get the width & height of the image
+  let loadedImageWidth = img.width;
+  let loadedImageHeight = img.height;
+
+  // get the scale
+  // it is the min of the 2 ratios
+  let scaleFactor = Math.max(canvas.width / img.width, canvas.height / img.height);
+  
+  // Finding the new width and height based on the scale factor
+  let newWidth = img.width * scaleFactor;
+  let newHeight = img.height * scaleFactor;
+  
+  // get the top left position of the image
+  // in order to center the image within the canvas
+  let x = (canvas.width / 2) - (newWidth / 2);
+  let y = (canvas.height / 2) - (newHeight / 2);
+  
+  // When drawing the image, we have to scale down the image
+  // width and height in order to fit within the canvas
+  context.drawImage(img, x, y, newWidth, newHeight);
+};
+
+// Now that we have set up the image "onload" handeler, we can assign
+// an image URL to the image.
+//img.src = imageUrl;
+//};
+/*
 function render() {
   context.clearRect(0, 0, canvas.width, canvas.height);
-  context.drawImage(images[partner.frame], 0, 0);
-}
+  context.drawImage(images[bulb.frame], 0, 0);
+} */
     });
 
     return () => {
