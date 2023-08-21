@@ -49,7 +49,7 @@ const About = () => {
   }
   const context = canvas.getContext("2d");
 
-  const frameCount =95;
+  const frameCount =115;
   const currentFrame = (index) =>
     `/images/light/Landing_Page_Ani_${(
       index + 1
@@ -143,7 +143,7 @@ function render() {
       <div className="grid place-items-center xl:gap-0 gap-10  w-full grid-cols-1 xl:grid-cols-2 lg:h-[100vh] 2xl:max-w-[1600px]">
         <div  className="flex px-4 sm:px-8  justify-center items-center w-full pt-8 sm:pt-14 pb-0 xl:py-14 lg:bg-white">
           <div id="intro" className="flex justify-start items-start flex-col gap-5">
-            <h3 className="text-black font-agency font-bold text-[40px] md:text-[50px] 2xl:text-[70px] uppercase xl:max-w-[531px]">
+            <h3 className="text-black font-agency font-bold text-[40px] md:text-[50px] 2xl:text-[60px] uppercase xl:max-w-[531px]">
               "Leading the path to a{" "}
               <span className="text-primary">brighter</span> future with
               Regenerative Finance"

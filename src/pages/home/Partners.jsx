@@ -49,7 +49,7 @@ const Partners = () => {
   }
   const context = canvas.getContext("2d");
 
-  const frameCount =210;
+  const frameCount =230;
   const currentFrame = (index) =>
     `/images/light/Landing_Page_Ani_${(
       index + 1
@@ -59,7 +59,7 @@ const Partners = () => {
   
   const images = [];
   const partner = {
-    frame: 135
+    frame: 114
   };
   
   for (let i = 0; i < frameCount; i++) {
@@ -139,10 +139,10 @@ function render() {
     <>
     <div id="pintext-partners"></div>
     <section id="partners" className="wrapper overflow-hidden">
-      <div className="grid max-h-[100vh] place-items-flex-start  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
+      <div className="grid min-h-[100vh] place-items-flex-start  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
         <div className="flex px-4  sm:px-8 bg-[rgb(24,24,24)] justify-center items-center w-full py-8 sm:py-14 xl:py-14">
           <div  id="partners-intro" className="flex justify-start items-start flex-col gap-5">
-            <h3 className="text-white font-agency font-bold text-[40px] md:text-[50px] 2xl:text-[70px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
+            <h3 className="text-white font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
               We are <span className="text-primary">proud to partner</span> with
               prestigious organizations and industry pioneers, creating a
               powerhouse of mutual growth and sustainability.

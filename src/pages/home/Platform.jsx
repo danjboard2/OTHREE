@@ -149,10 +149,10 @@ const Platform = () => {
     <>
     <div id="pin-eco"></div>
     <section id="ecosystem" className="wrapper overflow-hidden">
-      <div className="grid  items-stretch place-items-center  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
+      <div className="grid  items-stretch place-items-center h-[100vh]  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
         <div className="flex px-4  sm:px-8 bg-[#334B08] justify-center items-center w-full py-8 sm:py-14 xl:py-14">
           <div  id="eco-intro" className="flex justify-start items-start flex-col gap-5">
-            <h3 className="text-white font-agency font-bold text-[40px] md:text-[50px] 2xl:text-[70px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
+            <h3 className="text-white font-agency font-bold text-[40px] md:text-[50px] 2xl:text-[60px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
               An <span className="text-primary">all-in-one</span> ReFi Platform
               for Sustainable Lending & Governance.
             </h3>
