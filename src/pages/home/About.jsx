@@ -111,7 +111,12 @@ let render = images[0].onload = () => {
   
   // When drawing the image, we have to scale down the image
   // width and height in order to fit within the canvas
-  context.drawImage(img, x, y, newWidth, newHeight);
+  //context.drawImage(img, x, y, newWidth, newHeight);
+
+  var ratio = img.naturalWidth / img.naturalHeight;
+var width = canvas.width;
+var height = width / ratio;
+context.drawImage(img, 0, 0, width, height);
 };
 
 // Now that we have set up the image "onload" handeler, we can assign

@@ -103,15 +103,15 @@ const Platform = () => {
     // Once the image is loaded, we will get the width & height of the image
     let loadedImageWidth = img.width;
     let loadedImageHeight = img.height;
-  
+  console.log(img)
     // get the scale
     // it is the min of the 2 ratios
-    let scaleFactor = Math.max(canvas.width / img.width, canvas.height / img.height);
+    let scaleFactor = Math.max(canvas.width / loadedImageWidth, canvas.height / loadedImageHeight);
     
     // Finding the new width and height based on the scale factor
-    let newWidth = img.width * scaleFactor;
-    let newHeight = img.height * scaleFactor;
-    
+    let newWidth = loadedImageWidth* scaleFactor;
+    let newHeight = loadedImageHeight * scaleFactor;
+    console.log(newWidth + '    ' + newHeight) 
     // get the top left position of the image
     // in order to center the image within the canvas
     let x = (canvas.width / 2) - (newWidth / 2);
@@ -119,7 +119,14 @@ const Platform = () => {
     
     // When drawing the image, we have to scale down the image
     // width and height in order to fit within the canvas
-    context.drawImage(img, x, y, newWidth, newHeight);
+    //context.drawImage(img, x, y, newWidth, newHeight);
+/*   context.drawImage(img, 0, 0, img.width,    img.height,     // source rectangle
+                   0, 0, canvas.width, canvas.height);  */ // destination rectangle
+
+var ratio = img.naturalWidth / img.naturalHeight;
+var width = canvas.width;
+var height = width / ratio;
+context.drawImage(img, 0, 0, width, height);
   };
   
   // Now that we have set up the image "onload" handeler, we can assign
