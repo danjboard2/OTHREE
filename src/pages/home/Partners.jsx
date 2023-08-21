@@ -26,7 +26,7 @@ const Partners = () => {
             scrollTrigger: {
               trigger: ".canvas-container-partner",
               start: "top top",
-              once: true,
+              //once: true,
               markers: true,
               scrub: 1,
             },

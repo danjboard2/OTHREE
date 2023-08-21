@@ -26,7 +26,7 @@ const About = () => {
             scrollTrigger: {
               trigger: ".canvas-container",
               start: "top top",
-              once: true,
+              //once: true,
               markers: true,
               scrub: 1,
             },

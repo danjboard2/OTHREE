@@ -37,7 +37,7 @@ const Platform = () => {
             trigger: ".canvas-container-ecosystem",
             start: "top top",
             markers: true,
-            once: true,
+            //once: true,
             scrub: 1,
           },
           onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
