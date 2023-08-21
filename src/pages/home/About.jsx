@@ -14,7 +14,7 @@ const About = () => {
         scrollTrigger: {
           trigger: "#about",
           start: window.innerWidth > 1024 ? "top top" : "20% 20%",
-          end: "+=3000px",
+          end: "+=2000px",
           pin: true,
           scrub: 1,
           pinSpacing: true,
