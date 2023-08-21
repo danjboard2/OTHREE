@@ -15,8 +15,8 @@ let mm = gsap.matchMedia();
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: "#partners",
-          start: window.innerWidth > 800 ? "top top" : "20% 20%",
-          end: window.innerWidth > 800 ? "+=2000px" : "+=100px",
+          start: window.innerWidth > 800 ? "top top" : "top bottom",
+          end: window.innerWidth > 800 ? "+=2000px" : "100px",
           pin: window.innerWidth > 800 ? true : false,
           scrub: 1,
           pinSpacing: true,
@@ -27,10 +27,12 @@ let mm = gsap.matchMedia();
             ease: "none",
             scrollTrigger: {
               trigger: ".canvas-container-partner",
-              start: window.innerWidth > 800 ? "top top" : "top bottom",
+              start: window.innerWidth > 800 ? "top top" : "bottom bottom",
               //once: true,
               //markers: true,
-              scrub: 1,
+              scrub: window.innerWidth > 800 ? 1:  0,
+              end: window.innerWidth > 800 ? "auto" : "250px",
+              id: "partner"
             },
             onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
           })
