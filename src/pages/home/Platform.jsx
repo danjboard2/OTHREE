@@ -164,7 +164,7 @@ context.translate(-canvas.width/2,-canvas.height/2); */
     <>
     <div id="pin-eco"></div>
     <section id="ecosystem" className="wrapper overflow-hidden">
-      <div className="grid  items-stretch place-items-center h-[100vh]  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
+      <div className="grid  items-stretch place-items-center min-h-[100vh]  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
         <div className="flex px-4  sm:px-8 bg-[#334B08] justify-center items-center w-full py-8 sm:py-14 xl:py-14">
           <div  id="eco-intro" className="flex justify-start items-start flex-col gap-5">
             <h3 className="text-white font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
@@ -189,7 +189,7 @@ context.translate(-canvas.width/2,-canvas.height/2); */
             </Link>
           </div>
         </div>
-        <div id="ecosystemimage" className="canvas-container-ecosystem h-[400px] bg-black flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
+        <div id="ecosystemimage" className="canvas-container-ecosystem min-h-[400px] bg-black flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
             <canvas id="hero-ecosystem" className="bg-black" />
       </div>
       </div>

@@ -181,7 +181,7 @@ function render() {
             </Link>
           </div>
         </div>
-        <div id="partnerimage" className="canvas-container-partner h-[400px] bg-[#b1c6b7] flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
+        <div id="partnerimage" className="canvas-container-partner min-h-[400px] bg-[#b1c6b7] flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
             <canvas id="hero-partner" className="bg-black" />
       </div>
       </div>
