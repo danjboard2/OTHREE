@@ -30,8 +30,7 @@ let mm = gsap.matchMedia();
               start: window.innerWidth > 800 ? "top top" : "bottom bottom",
               //once: true,
               //markers: true,
-              scrub: window.innerWidth > 800 ? 1:  0,
-              end: window.innerWidth > 800 ? "auto" : "250px",
+              scrub: 1,
               id: "partner"
             },
             onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate

@@ -25,7 +25,7 @@ const Platform = () => {
     const timeline3 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pin-eco",
-        start: window.innerWidth > 800 ? "top top" : "20% 20%",
+        start: window.innerWidth > 800 ? "top top" : "top bottom",
         end: window.innerWidth > 800 ? "+=2000px" : "+=100px",
         pin: window.innerWidth > 800 ? true : false,
         scrub: 1,
