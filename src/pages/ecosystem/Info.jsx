@@ -1,6 +1,6 @@
 import { useState} from "react";
 import React from 'react';
-import { Player, ControlBar } from 'video-react';
+import { Player, ControlBar, LoadingSpinner } from 'video-react';
 import "/node_modules/video-react/dist/video-react.css"; 
 
 const Info = () => {
@@ -178,6 +178,7 @@ const TabDesc = ({ video, heading, desc, url }) => {
         autoPlay
         preload
         src={video}>
+          <LoadingSpinner />
         <ControlBar disabled={true}/>
           </Player>
     </div>
