@@ -177,6 +177,7 @@ const TabDesc = ({ video, heading, desc, url }) => {
         fluid 
         autoPlay
         preload
+        muted
         src={video}>
           <LoadingSpinner />
         <ControlBar disabled={true}/>
