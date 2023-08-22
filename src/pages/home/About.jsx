@@ -16,7 +16,7 @@ let mm = gsap.matchMedia();
         scrollTrigger: {
           trigger: "#about",
           start: window.innerWidth > 800 ? "top top" : "top bottom" ,
-          end: window.innerWidth > 800 ? "+=2000px" : "+=100px",
+          end: window.innerWidth > 800 ? "+=1300px" : "+=100px",
           pin: window.innerWidth > 800 ? true : false,
           scrub:1,
           pinSpacing: true,

@@ -15,7 +15,7 @@ const Platform = () => {
         scrollTrigger: {
           trigger: "#ecosystem",
           start: window.innerWidth > 800 ? "top top" : "20% 20%",
-          end: "+=3000px",
+          end: "+=1300px",
           pin: window.innerWidth > 800 ? true : false,
           scrub: 1,
           pinSpacing: true,
