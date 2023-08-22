@@ -25,5 +25,5 @@ position: relative;
 margin-top:-100px;
 }
 .video-react {
-  background-color: #fff !important;
+  background-color: rgba(23,23,23,0.1) !important;
 }
