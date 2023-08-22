@@ -189,7 +189,7 @@ context.translate(-canvas.width/2,-canvas.height/2); */
             </Link>
           </div>
         </div>
-        <div id="ecosystemimage" className="canvas-container-ecosystem bg-black flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
+        <div id="ecosystemimage" className="canvas-container-ecosystem h-[400px] bg-black flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
             <canvas id="hero-ecosystem" className="bg-black" />
       </div>
       </div>
