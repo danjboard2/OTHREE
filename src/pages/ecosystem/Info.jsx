@@ -1,6 +1,6 @@
 import { useState} from "react";
 import React from 'react';
-import { Player, ControlBar, LoadingSpinner } from 'video-react';
+import { Player, ControlBar, LoadingSpinner, BigPlayButton } from 'video-react';
 import "/node_modules/video-react/dist/video-react.css"; 
 
 const Info = () => {
@@ -180,6 +180,7 @@ const TabDesc = ({ video, heading, desc, url }) => {
         src={video}>
           <LoadingSpinner />
         <ControlBar disabled={true}/>
+        <BigPlayButton disabled={true} />
           </Player>
     </div>
      </div>
