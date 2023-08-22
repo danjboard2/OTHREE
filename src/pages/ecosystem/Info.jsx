@@ -116,18 +116,31 @@ const Info = () => {
             );
           })}
         </div>
+            <div id="info"></div>
         {selectedTab && <TabDesc {...TABS__DATA[selectedTab.toLowerCase()]} />}
       </div>
     </section>
   );
 };
 
+
 export default Info;
 
 const Tab = ({ img, name, handleFunction, activeTab }) => {
+  setTimeout(smoothScroll, 300);
+  function smoothScroll(){
+    document.querySelector('#info').scrollIntoView({
+        behavior: 'smooth'
+    });
+  }
+  function handleClick(name) {
+    handleFunction(name);
+    smoothScroll();
+  }
   return (
+    <>
     <button
-      onClick={() => handleFunction(name)}
+      onClick={() => handleClick(name)}
       className={`w-full flex justify-start items-center flex-col gap-4 pb-3 border-b-4 border-solid ${
         activeTab === name ? "border-primary" : "border-[#b3b3b3]"
       }`}
@@ -147,6 +160,7 @@ const Tab = ({ img, name, handleFunction, activeTab }) => {
         <span className="text-primary">0</span>3 {name}
       </p>
     </button>
+    </>
   );
 };
 const TabDesc = ({ video, heading, desc, url }) => {
