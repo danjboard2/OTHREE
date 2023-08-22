@@ -24,6 +24,11 @@ height: 100vh;
 position: relative;
 margin-top:-100px;
 }
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
 .video-react {
   background-color: transparent !important;
 }
