@@ -16,7 +16,7 @@ const Box = () => {
             </div>
           </div>
           <a
-            href="#"
+            href="/whitepaper.pdf#page=27"
             target="blank"
             className="text-black self-end md:self-auto text-xl font-normal flex justify-start items-center gap-6"
           >
