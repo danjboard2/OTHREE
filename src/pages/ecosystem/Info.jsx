@@ -174,6 +174,7 @@ const TabDesc = ({ video, heading, desc, url }) => {
       </div>
       <div className="video-wrap flex justify-start flex-col max-w-[50%] items-start gap-4 w-[100%]">
         <Player
+        playsInline
         fluid 
         autoPlay
         preload
