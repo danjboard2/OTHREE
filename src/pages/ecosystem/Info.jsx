@@ -127,7 +127,6 @@ const Info = () => {
 export default Info;
 
 const Tab = ({ img, name, handleFunction, activeTab }) => {
-  setTimeout(smoothScroll, 300);
   function smoothScroll(){
     document.querySelector('#info').scrollIntoView({
         behavior: 'smooth'
@@ -135,7 +134,7 @@ const Tab = ({ img, name, handleFunction, activeTab }) => {
   }
   function handleClick(name) {
     handleFunction(name);
-    smoothScroll();
+    setTimeout(function() { smoothScroll(); }, 300);
   }
   return (
     <>
