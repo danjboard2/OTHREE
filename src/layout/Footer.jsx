@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="wrapper bg-[rgb(24,24,24)] py-12 ">
+    <footer className="wrapper relative pt-[150px] bg-[rgb(24,24,24)] py-12 ">
       <div className="flex justify-center sm:flex-row flex-col items-center w-[90%] gap-4 md:gap-8">
         <p className="text-white font-normal text-base md:text-2xl">
           <span className="text-primary">Connect</span> with us on our social

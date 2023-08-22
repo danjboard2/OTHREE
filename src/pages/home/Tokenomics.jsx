@@ -2,7 +2,7 @@ const Tokenomics = () => {
   return (
     <section
       id="tokenomics"
-      className="wrapper bg-cover bg-no-repeat py-6 sm:py-16"
+      className="wrapper relative bg-cover bg-no-repeat py-6 sm:py-16"
     >
       <div className="w-[90%] lg:flex-row flex-col max-w-[1400px] flex justify-between items-center lg:items-start gap-10">
         <div className="flex  justify-start items-center text-center lg:text-left lg:items-start flex-col gap-3 sm:gap-5">
@@ -19,6 +19,11 @@ const Tokenomics = () => {
           alt=""
         />
       </div>
+      { /* <img
+        src="/grass.png"
+        className="object-cover w-full min-h-[60px] absolute top-full translate-y-1 left-0"
+        alt=""
+  />  */ }
     </section>
   );
 };

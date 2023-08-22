@@ -58,12 +58,12 @@ const Home = () => {
         </div>
       </div>
       <Tokenomics />
-      { /* <img
+      {     /*  <img
         src="/grass.png"
-        className="object-cover w-full min-h-[60px] -mb-2"
+        className="object-cover w-full min-h-[60px] absolute top-[-60px] sm:top-[-80px] lg:top-[-120px] 2xl:top-[-140px] translate-y-1 left-0"
         alt=""
-  /> */}
-       <Roadmap /> 
+  /> */ }
+       { /* <Roadmap /> */}
       {/* <Team /> */}
     </>
   );
