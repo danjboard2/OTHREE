@@ -4,11 +4,13 @@ const Box = () => {
       <div className="w-[90%] max-w-[1250px] flex justify-start items-start flex-col  border-2 border-dashed border-black border-opacity-50 rounded-[20px] overflow-hidden bg-[rgba(23,23,23,0.1)]">
         <div className="flex md:flex-row flex-col justify-between items-start gap-5 w-full p-8 bg-[rgba(23,23,23,0.1)]">
           <div className="flex flex-wrap justify-center sm:justify-start items-center gap-6">
-            <div className="grid place-items-center rounded-full bg-white border-2 border-solid border-[#ababab] w-[150px]  h-[150px] ">
-              <p className="text-[#767676] text-center text-2xl  uppercase font-bold">
-                ORP LOGO
+          <a href="https://orpinc.ca" target="blank">
+            <div className="grid place-items-center rounded-full bg-white border-2 border-solid border-[#ababab] w-[150px]  h-[150px] overflow-hidden">
+             <p className="text-[#767676] text-center text-2xl  uppercase font-bold">
+                <img src="/orp-logo.png"/>
               </p>
             </div>
+            </a>
             <div className="grid place-items-center rounded-full bg-white border-2 border-solid border-[#ababab] w-[150px]  h-[150px] ">
               <p className="text-[#767676] text-center text-base  uppercase font-bold">
                 FOREST ORGANIC LOGO
