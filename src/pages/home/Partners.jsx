@@ -15,9 +15,9 @@ let mm = gsap.matchMedia();
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: "#partners",
-          start: window.innerWidth > 800 ? "top top" : "top bottom",
-          end: window.innerWidth > 800 ? "+=1300px" : "100px",
-          pin: window.innerWidth > 800 ? true : false,
+          start: window.innerWidth > 767 ? "top top" : "top bottom",
+          end: window.innerWidth > 767 ? "+=2000px" : "+=100px",
+          pin: window.innerWidth > 1024 ? true : false,
           scrub: 1,
           pinSpacing: true,
           //markers: true,
@@ -27,7 +27,7 @@ let mm = gsap.matchMedia();
             ease: "none",
             scrollTrigger: {
               trigger: ".canvas-container-partner",
-              start: window.innerWidth > 800 ? "top top" : "bottom bottom",
+              start: window.innerWidth > 1024 ? "top top" : "top bottom",
               //once: true,
               //markers: true,
               scrub: 1,
@@ -83,7 +83,7 @@ let mm = gsap.matchMedia();
         id:"pintext",
         onEnter: () => 
         
-         mm.add("(min-width: 800px)", () => {
+         mm.add("(min-width: 1280px)", () => {
           timeline.set( "#partners-intro", { top: -400, position:"absolute"});
         timeline2.to(
           
@@ -153,7 +153,7 @@ function render() {
     <>
     <div id="pintext-partners"></div>
     <section id="partners" className="wrapper overflow-hidden">
-      <div className="grid min-h-[100vh] place-items-flex-start  w-full grid-cols-1 xl:grid-cols-2 2xl:max-w-[1600px]">
+      <div className="grid min-h-[100vh] place-items-flex-start  w-full grid-cols-1 md:grid-cols-2 2xl:max-w-[1600px]">
         <div className="flex px-4  sm:px-8 bg-[rgb(24,24,24)] justify-center items-center w-full py-8 sm:py-14 xl:py-14">
           <div  id="partners-intro" className="flex justify-start items-start flex-col gap-5">
             <h3 className="text-white font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
@@ -180,7 +180,7 @@ function render() {
             </Link>
           </div>
         </div>
-        <div id="partnerimage" className="canvas-container-partner min-h-[400px] bg-[#b1c6b7] flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden">
+        <div id="partnerimage" className="canvas-container-partner h-[500px] md:h-full sm:min-h-[400px] bg-[#b1c6b7] flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full overflow-hidden">
             <canvas id="hero-partner" className="bg-black" />
       </div>
       </div>

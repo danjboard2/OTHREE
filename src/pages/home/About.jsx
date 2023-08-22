@@ -15,9 +15,9 @@ let mm = gsap.matchMedia();
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: "#about",
-          start: window.innerWidth > 800 ? "top top" : "top bottom" ,
-          end: window.innerWidth > 800 ? "+=1300px" : "+=100px",
-          pin: window.innerWidth > 800 ? true : false,
+          start: window.innerWidth > 767 ? "top top" : "top bottom",
+          end: window.innerWidth > 767 ? "+=2000px" : "+=100px",
+          pin: window.innerWidth > 1024 ? true : false,
           scrub:1,
           pinSpacing: true,
          //markers: true,
@@ -28,7 +28,7 @@ let mm = gsap.matchMedia();
             ease: "none",
             scrollTrigger: {
               trigger: ".canvas-container",
-              start: window.innerWidth > 800 ? "top top" : "top bottom",
+              start: window.innerWidth > 1024 ? "top top" : "top bottom",
               //once: true,
              // markers: true,
               scrub: 1,
@@ -39,7 +39,7 @@ let mm = gsap.matchMedia();
     })
       // images 
 
-  var canvas = document.getElementById("hero-lightpass");
+const canvas = document.getElementById("hero-lightpass");
   fitToContainer(canvas);
   
   function fitToContainer(canvas){
@@ -77,7 +77,7 @@ let mm = gsap.matchMedia();
     const timeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#pintext",
-        start: window.innerWidth > 1024 ? "top bottom" : "20% 20%",
+        start: window.innerWidth > 1280 ? "top bottom" : "20% 20%",
         end: "+=1000px",
         pin: false,
         scrub: true,
@@ -85,7 +85,7 @@ let mm = gsap.matchMedia();
         //markers: true,
         id:"pintext",
         onEnter: () => 
-        mm.add("(min-width: 800px)", () => {
+        mm.add("(min-width: 1280px)", () => {
           timeline.set( "#intro", { top: -400, position:"absolute"});
         timeline2.to(
           "#intro", { top: 150,  position:"absolute"}, {duration:5}
@@ -159,7 +159,7 @@ function render() {
     <>
     <div id="pintext"></div>
     <section id="about" className="wrapper overflow-hidden">
-      <div className="grid place-items-center xl:gap-0 gap-10 min-h-[100vh] w-full grid-cols-1 xl:grid-cols-2 lg:min-h-[100vh] 2xl:max-w-[1600px]">
+      <div className="grid min-h-[100vh] place-items-flex-start  w-full grid-cols-1 md:grid-cols-2 2xl:max-w-[1600px]">
         <div  className="flex px-4 sm:px-8  justify-center items-center w-full pt-10 sm:pt-14 pb-0 xl:py-14 lg:bg-white">
           <div id="intro" className="flex justify-start items-start flex-col gap-5">
             <h3 className="text-black font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[531px]">
@@ -168,7 +168,7 @@ function render() {
               Regenerative Finance"
             </h3>
             <div className="w-full max-w-[600px] xl:max-w-[412px] bg-primary h-2"></div>
-            <p className="text-black xl:max-w-[645px] text-base xl:text-xl font-normal leading-[1.4]">
+            <p className="text-black xl:max-w-[645px] text-base xl:text-xl font-normal leading-[1.4] pb-8">
               <strong>
                 We are <span className="text-primary">O</span>3
               </strong>
@@ -185,7 +185,7 @@ function render() {
             </p>
           </div>
         </div>
-        <div id="aboutimage" className="canvas-container h-[400px] xl:max-w-[100%] xlg:max-w-[100%] w-full xl:h-full overflow-hidden bg-black">
+        <div id="aboutimage" className="canvas-container h-[500px] md:h-full sm:min-h-[400px] bg-black flex justify-center items-center xl:max-w-[100%] xlg:max-w-[100%] w-full overflow-hidden">
             <canvas id="hero-lightpass" />
       </div>
       </div>

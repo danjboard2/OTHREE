@@ -18,7 +18,7 @@ export default {
         header: "0px 4px 4px rgba(0, 0, 0, 0.25",
       },
       backgroundImage: {
-        hero: "url('/hero-bg.png')",
+        hero: "url('/hero-bg.jpg')",
         tokenomics: "url('/tokenomics-bg.png')",
       },
     },

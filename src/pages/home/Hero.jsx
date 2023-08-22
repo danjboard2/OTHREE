@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="wrapper bg-hero h-screen bg-no-repeat lg:h-[calc(100vh_-_125px)] min-h-[450px] lg:min-h-[650px] bg-cover bg-right">
+    <section className="wrapper bg-hero h-screen bg-no-repeat lg:h-[calc(100vh_-_125px)] min-h-[450px] lg:min-h-[650px] bg-cover bg-left">
       <div className="flex justify-center h-full lg:pt-0 pt-[140px] items-start flex-col gap-8 md:gap-12 w-[90%] max-w-[1400px]">
         <div className="flex max-h-[182px] justify-start items-stretch gap-5">
           <h3 className="font-bold leading-[0.75] font-agency text-[100px] md:text-[232px] text-white">
