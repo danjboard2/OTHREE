@@ -176,6 +176,7 @@ const TabDesc = ({ video, heading, desc, url }) => {
         <Player
         fluid 
         autoPlay
+        preload
         src={video}>
         <ControlBar disabled={true}/>
           </Player>
