@@ -28,12 +28,12 @@ const Header = () => {
         <div className="flex justify-center sm:pr-8 items-center gap-7">
           <div className="w-[1px] h-[80px] sm:block hidden bg-[#5B5B5B]"></div>
           <a
-            href="#"
+            href="whitepaper.pdf"
             target="blank"
             className="flex justify-center items-center gap-7"
           >
             <p className="font-bold sm:block hidden text-xl text-white">
-              Get in touch
+              Whitepaper
             </p>
             <img
               className="w-10 xl:w-[56px] object-contain"

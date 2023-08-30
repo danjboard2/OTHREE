@@ -180,7 +180,7 @@ context.translate(-canvas.width/2,-canvas.height/2); */
               to="/ecosystem"
               className="font-bold text-xl text-white flex justify-end items-center w-full gap-5"
             >
-              Learn More
+              O3 Ecosystem
               <img
                 src="/arrow-right.png"
                 className="w-10 md:w-[56px] object-contain"

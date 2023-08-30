@@ -171,7 +171,7 @@ function render() {
               to="/partners"
               className="font-bold text-xl text-white flex justify-end items-center w-full gap-5"
             >
-              Learn More
+              Our Partners
               <img
                 src="/arrow-right.png"
                 className="w-10 md:w-[56px] object-contain"

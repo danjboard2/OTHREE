@@ -22,7 +22,7 @@ const Box = () => {
             target="blank"
             className="text-black self-end md:self-auto text-xl font-normal flex justify-start items-center gap-6"
           >
-            More Information
+            03 Whitepaper
             <img
               src="/arrow-right.png"
               className="w-[56px] object-contain invert"
@@ -32,7 +32,7 @@ const Box = () => {
         </div>
         <div className="flex justify-start items-center sm:items-start flex-col gap-7 px-14 py-7 w-full">
           <h4 className="text-black font-bold text-[35px]">
-            <span className="text-primary">O</span>3 Sectors
+          Sectors Served
           </h4>
           <div className="flex flex-wrap  justify-center sm:justify-around items-start w-full gap-8">
             <div className="flex justify-start items-center text-center sm:text-left sm:items-start flex-col gap-6">

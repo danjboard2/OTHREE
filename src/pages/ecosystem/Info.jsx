@@ -99,7 +99,7 @@ const Info = () => {
       video: "../videos/INSURANCE_FUND.mp4",
     },
   };
-  const [selectedTab, setSetselectedTab] = useState("");
+  const [selectedTab, setSetselectedTab] = useState("Lending Platform");
 
   return (
     <section className="wrapper my-10 sm:my-20">
@@ -177,7 +177,7 @@ const TabDesc = ({ video, heading, desc, url }) => {
           target="blank"
           className="lg:self-end mt-auto flex justify-center items-center gap-4 text-black  text-xl font-normal"
         >
-          More Information
+         O3 Whitepaper
           <img
             src="/arrow-right.png"
             className="invert w-10 xl:w-[56px] object-contain"

@@ -21,13 +21,13 @@ const Footer = () => {
               alt=""
             />
           </a>
-          <a href="#" target="blank">
+         {/* <a href="#" target="blank">
             <img
               src="/linkedin.svg"
               className="object-contain max-w-[20px] md:max-w-[28px]"
               alt=""
             />
-          </a>
+  </a> */}
         </div>
       </div>
     </footer>

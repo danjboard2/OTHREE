@@ -73,10 +73,10 @@ const HomeHeader = () => {
             </a>
             <a
               onClick={() => setHeaderToggle(false)}
-              href="#"
+              href="whitepaper.pdf"
               className="flex lg:hidden justify-center  items-center gap-7"
             >
-              <p className="font-bold text-xl text-white">Get in touch</p>
+              <p className="font-bold text-xl text-white">Whitepaper</p>
               <img
                 className="w-10 xl:w-[56px] object-contain"
                 src="/arrow-right.png"
@@ -88,11 +88,11 @@ const HomeHeader = () => {
         <div className="hidden lg:flex justify-center pr-8 items-center gap-7">
           <div className="w-[1px] h-[80px] bg-[#5B5B5B]"></div>
           <a
-            href="#"
+            href="whitepaper.pdf"
             target="blank"
             className="flex justify-center items-center gap-7"
           >
-            <p className="font-bold text-xl text-white">Get in touch</p>
+            <p className="font-bold text-xl text-white">Whitepaper</p>
             <img
               className="w-10 xl:w-[56px] object-contain"
               src="/arrow-right.png"
