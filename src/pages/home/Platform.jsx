@@ -7,7 +7,6 @@ const Platform = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.config({ ignoreMobileResize: true });
 
     let mm = gsap.matchMedia();
     

@@ -8,7 +8,7 @@ const Partners = () => {
   
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.config({ ignoreMobileResize: true });
+
     //responsive
 let mm = gsap.matchMedia();
 
