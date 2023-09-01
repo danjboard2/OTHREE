@@ -41,16 +41,23 @@ let mm = gsap.matchMedia();
 
   const canvas = document.getElementById("hero-partner");
 fitToContainer(canvas);
-  
-  function fitToContainer(canvas){
-    // Make it visually fill the positioned parent
-    canvas.style.width ='100%';
-    canvas.style.height='100%';
-    // ...then set the internal size to match
-    canvas.width  = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  }
-  const context = canvas.getContext("2d");
+function fitToContainer(canvas){
+  // Make it visually fill the positioned parent
+  canvas.style.width ='100%';
+  canvas.style.height='100%';
+}
+const context = canvas.getContext("2d");
+
+function sizeTheCanvas() {
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+      // ...then set the internal size to match
+      console.log('width: ' + canvas.offsetWidth)
+      console.log('height: ' + canvas.offsetHeight)
+}
+setTimeout(() => {
+  sizeTheCanvas(canvas);
+}, 300);
 
   const frameCount =230;
   const currentFrame = (index) =>
