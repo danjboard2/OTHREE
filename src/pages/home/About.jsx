@@ -73,9 +73,11 @@ fitToContainer(canvas);
   };
   
   for (let i = 0; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-    images.push(img);
+    new Promise(resolve => {
+      const img = new Image();
+      img.src = currentFrame(i);
+      images.push(img);
+    })
   }
   
 
