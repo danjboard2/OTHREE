@@ -49,7 +49,7 @@ const Platform = () => {
       // images 
 
   const canvas = document.getElementById("hero-ecosystem");
-  fitToContainer(canvas);
+  window.onload =  fitToContainer(canvas);
   
   function fitToContainer(canvas){
     // Make it visually fill the positioned parent
@@ -124,7 +124,7 @@ const Platform = () => {
     
     // When drawing the image, we have to scale down the image
     // width and height in order to fit within the canvas
-    context.drawImage(img, x, y, newWidth, newHeight);
+    window.onload = context.drawImage(img, x, y, newWidth, newHeight);
  // context.drawImage(img, 0, 0, img.width,    img.height,     // source rectangle
             //       0, 0, canvas.width, canvas.height);  // destination rectangle
 /*ratio = img.naturalWidth / img.naturalHeight;

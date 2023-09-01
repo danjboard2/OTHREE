@@ -40,7 +40,7 @@ let mm = gsap.matchMedia();
       // images 
 
   const canvas = document.getElementById("hero-partner");
-  fitToContainer(canvas);
+  window.onload =  fitToContainer(canvas);
   
   function fitToContainer(canvas){
     // Make it visually fill the positioned parent
@@ -117,7 +117,7 @@ let render = images[0].onload = () => {
   
   // When drawing the image, we have to scale down the image
   // width and height in order to fit within the canvas
-  context.drawImage(img, x, y, newWidth, newHeight);
+  window.onload = context.drawImage(img, x, y, newWidth, newHeight);
 
   /* var ratio = img.naturalWidth / img.naturalHeight;
 var width = canvas.width;
