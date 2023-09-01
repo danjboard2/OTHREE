@@ -55,9 +55,9 @@ fitToContainer(canvas);
         console.log('width: ' + canvas.offsetWidth)
         console.log('height: ' + canvas.offsetHeight)
   }
-  setTimeout(() => {
+  //setTimeout(() => {
     sizeTheCanvas(canvas);
-}, 300);
+//}, 300);
 
   const frameCount =115;
   const currentFrame = (index) =>
