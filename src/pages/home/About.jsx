@@ -112,30 +112,17 @@ let render = images[0].onload = () => {
   // it is the min of the 2 ratios
   let scaleFactor = Math.max(canvas.width / loadedImageWidth, canvas.height / loadedImageHeight);
   
-  // Finding the new width and height based on the scale factor
-  let newWidth = img.width * scaleFactor;
-  let newHeight = img.height * scaleFactor;
-  
-  // get the top left position of the image
-  // in order to center the image within the canvas
-  let x = (canvas.width / 2) - (newWidth / 2);
-  let y = (canvas.height / 2) - (newHeight / 2);
-  
-  // When drawing the image, we have to scale down the image
-  // width and height in order to fit within the canvas
-  //context.drawImage(img, x, y, newWidth, newHeight);
-
-//  var ratio = img.naturalWidth / img.naturalHeight;
-//var width = canvas.width;
-//var height = width / ratio;
-//context.drawImage(img, 0, 0, width, height);
-if (window.innerWidth > 800) {
-context.translate(canvas.width/2,canvas.height/2);
-context.drawImage(img,-img.width/2,-img.height/2);
-context.translate(-canvas.width/2,-canvas.height/2);
-} else {
- context.drawImage(img, x, y, newWidth, newHeight);
-}
+    // Finding the new width and height based on the scale factor
+    let newWidth = loadedImageWidth* scaleFactor;
+    let newHeight = loadedImageHeight * scaleFactor;
+    // get the top left position of the image
+    // in order to center the image within the canvas
+    let x = (canvas.width / 2) - (newWidth / 2);
+    let y = (canvas.height / 2) - (newHeight / 2);
+    
+    // When drawing the image, we have to scale down the image
+    // width and height in order to fit within the canvas
+    context.drawImage(img, x, y, newWidth, newHeight);
 };
 
 // Now that we have set up the image "onload" handeler, we can assign

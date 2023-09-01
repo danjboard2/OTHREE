@@ -83,7 +83,7 @@ const Platform = () => {
     const img = new Image();
     
     img.src = currentFrame(i);
-    window.onload =  images.push(img);
+    images.push(img);
   }
   
     const timeline2 = gsap.timeline({
