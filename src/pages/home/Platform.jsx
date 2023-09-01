@@ -7,7 +7,7 @@ const Platform = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.normalizeScroll(true); // enable
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
     let mm = gsap.matchMedia();
     
@@ -41,7 +41,7 @@ const Platform = () => {
             start: window.innerWidth > 1024 ? "top top" : "top bottom",
            //markers: true,
             //once: true,
-            scrub: 0,
+            scrub: 1,
           },
           onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
         }),
