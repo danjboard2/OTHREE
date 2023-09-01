@@ -101,7 +101,9 @@ fitToContainer(canvas);
   
 
 //images[0].onload = render;
-window.onload = sizeTheCanvas(canvas);
+window.addEventListener('DOMContentLoaded',function () {
+  sizeTheCanvas(canvas);
+});
 
 let render = images[0].onload = () => {
   let img = images[bulb.frame];
