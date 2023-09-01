@@ -78,14 +78,12 @@ const Platform = () => {
   const ecosystem = {
     frame: 230
   };
-  
   for (let i = 0; i < frameCount; i++) {
-    new Promise(resolve => {
-      const img = new Image();
-      img.src = currentFrame(i);
+    const img = new Image();
+    img.onload = function() {
       images.push(img);
-    })
-  }
+    }
+}
   
     const timeline2 = gsap.timeline({
       scrollTrigger: {
