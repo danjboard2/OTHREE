@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 const Partners = () => {
 
   
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     //responsive
 let mm = gsap.matchMedia();
@@ -40,7 +40,7 @@ let mm = gsap.matchMedia();
       // images 
 
   const canvas = document.getElementById("hero-partner");
-  window.onload =  fitToContainer(canvas);
+fitToContainer(canvas);
   
   function fitToContainer(canvas){
     // Make it visually fill the positioned parent
@@ -66,9 +66,11 @@ let mm = gsap.matchMedia();
   };
   
   for (let i = 0; i < frameCount; i++) {
+    new Promise(resolve => {
     const img = new Image();
     img.src = currentFrame(i);
     images.push(img);
+  })
   }
   
     const timeline2 = gsap.timeline({
@@ -104,7 +106,7 @@ let render = images[0].onload = () => {
 
   // get the scale
   // it is the min of the 2 ratios
-  let scaleFactor = Math.max(canvas.width / img.width, canvas.height / img.height);
+  let scaleFactor = Math.max(canvas.width / loadedImageWidth, canvas.height / loadedImageHeight);
   
   // Finding the new width and height based on the scale factor
   let newWidth = img.width * scaleFactor;

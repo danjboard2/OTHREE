@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 const About = () => {
 
   
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 //responsive
 let mm = gsap.matchMedia();
@@ -40,7 +40,7 @@ let mm = gsap.matchMedia();
       // images 
 
 const canvas = document.getElementById("hero-lightpass");
-window.onload = fitToContainer(canvas);
+fitToContainer(canvas);
   
   function fitToContainer(canvas){
     // Make it visually fill the positioned parent
@@ -49,6 +49,8 @@ window.onload = fitToContainer(canvas);
     // ...then set the internal size to match
     canvas.width  = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
+    console.log('width: ' + canvas.offsetWidth)
+    console.log('height: ' + canvas.offsetHeight)
   }
   const context = canvas.getContext("2d");
 
@@ -105,7 +107,7 @@ let render = images[0].onload = () => {
 
   // get the scale
   // it is the min of the 2 ratios
-  let scaleFactor = Math.max(canvas.width / img.width, canvas.height / img.height);
+  let scaleFactor = Math.max(canvas.width / loadedImageWidth, canvas.height / loadedImageHeight);
   
   // Finding the new width and height based on the scale factor
   let newWidth = img.width * scaleFactor;

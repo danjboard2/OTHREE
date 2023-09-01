@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 
 const Platform = () => {
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     let mm = gsap.matchMedia();
@@ -49,7 +49,7 @@ const Platform = () => {
       // images 
 
   const canvas = document.getElementById("hero-ecosystem");
-  window.onload =  fitToContainer(canvas);
+  fitToContainer(canvas);
   
   function fitToContainer(canvas){
     // Make it visually fill the positioned parent
@@ -78,7 +78,7 @@ const Platform = () => {
     const img = new Image();
     
     img.src = currentFrame(i);
-    images.push(img);
+    window.onload =  images.push(img);
   }
   
     const timeline2 = gsap.timeline({
