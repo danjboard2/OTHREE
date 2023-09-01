@@ -41,7 +41,7 @@ const Platform = () => {
             start: window.innerWidth > 1024 ? "top top" : "top bottom",
            //markers: true,
             //once: true,
-            scrub: 1,
+            scrub: 0,
           },
           onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
         }),
