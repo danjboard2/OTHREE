@@ -131,10 +131,10 @@ let render = images[0].onload = () => {
 //context.drawImage(img, 0, 0, width, height);
 if (window.innerWidth > 800) {
 context.translate(canvas.width/2,canvas.height/2);
-window.onload = context.drawImage(img,-img.width/2,-img.height/2);
+context.drawImage(img,-img.width/2,-img.height/2);
 context.translate(-canvas.width/2,-canvas.height/2);
 } else {
-  window.onload =  context.drawImage(img, x, y, newWidth, newHeight);
+ context.drawImage(img, x, y, newWidth, newHeight);
 }
 };
 

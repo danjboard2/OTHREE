@@ -51,9 +51,6 @@ const context = canvas.getContext("2d");
 function sizeTheCanvas() {
   canvas.width  = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
-      // ...then set the internal size to match
-      console.log('width: ' + canvas.offsetWidth)
-      console.log('height: ' + canvas.offsetHeight)
 }
 setTimeout(() => {
   sizeTheCanvas(canvas);
@@ -126,7 +123,7 @@ let render = images[0].onload = () => {
   
   // When drawing the image, we have to scale down the image
   // width and height in order to fit within the canvas
-  window.onload = context.drawImage(img, x, y, newWidth, newHeight);
+context.drawImage(img, x, y, newWidth, newHeight);
 
   /* var ratio = img.naturalWidth / img.naturalHeight;
 var width = canvas.width;
