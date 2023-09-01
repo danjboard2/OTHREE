@@ -7,6 +7,7 @@ const Platform = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.normalizeScroll(true); // enable
 
     let mm = gsap.matchMedia();
     
