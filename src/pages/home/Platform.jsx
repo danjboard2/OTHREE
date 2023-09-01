@@ -108,7 +108,7 @@ const Platform = () => {
     // Once the image is loaded, we will get the width & height of the image
     let loadedImageWidth = img.width;
     let loadedImageHeight = img.height;
-  console.log(img)
+  //console.log(img)
     // get the scale
     // it is the min of the 2 ratios
     let scaleFactor = Math.max(canvas.width / loadedImageWidth, canvas.height / loadedImageHeight);
@@ -116,7 +116,6 @@ const Platform = () => {
     // Finding the new width and height based on the scale factor
     let newWidth = loadedImageWidth* scaleFactor;
     let newHeight = loadedImageHeight * scaleFactor;
-    console.log(newWidth + '    ' + newHeight) 
     // get the top left position of the image
     // in order to center the image within the canvas
     let x = (canvas.width / 2) - (newWidth / 2);
