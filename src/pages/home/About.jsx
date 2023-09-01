@@ -41,7 +41,6 @@ let mm = gsap.matchMedia();
 
 const canvas = document.getElementById("hero-lightpass");
 fitToContainer(canvas);
-  
   function fitToContainer(canvas){
     // Make it visually fill the positioned parent
     canvas.style.width ='100%';
@@ -56,6 +55,8 @@ fitToContainer(canvas);
         console.log('width: ' + canvas.offsetWidth)
         console.log('height: ' + canvas.offsetHeight)
   }
+
+  sizeTheCanvas(canvas);
 
   const frameCount =115;
   const currentFrame = (index) =>
@@ -98,12 +99,7 @@ fitToContainer(canvas);
         })
       }
   }) 
-  
 
-//images[0].onload = render;
-window.addEventListener('DOMContentLoaded',function () {
-  sizeTheCanvas(canvas);
-});
 
 let render = images[0].onload = () => {
   let img = images[bulb.frame];
