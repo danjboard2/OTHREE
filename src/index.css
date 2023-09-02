@@ -55,3 +55,10 @@ margin-top:-100px;
   background-position: 82.5% 50%;
 }
 }
+@media only screen and (max-width: 650px){
+#tokenomics .video-react {
+  padding-top: 100% !important;
+  margin-top:-100px;
+  z-index:0;
+}
+}

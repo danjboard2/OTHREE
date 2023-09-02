@@ -27,7 +27,7 @@ const Tokenomics = () => {
       window.removeEventListener('resize', updateVideoSource);
     };
   }, []);
-  
+
   return (
     <section
       id="tokenomics"
@@ -38,7 +38,7 @@ const Tokenomics = () => {
           <h3 className=" text-black font-bold font-agency text-[45px] sm:text-[70px]">
             TOKEN<span className="text-primary">O</span>MICS
           </h3>
-          <p className="px-6 py-5 pl-0  text-lg sm:text-2xl 2xl:text-[30px] font-bold leading-[1.4]">
+          <p className="px-6 py-5 pl-0  text-lg sm:text-2xl 2xl:text-[30px] font-bold leading-[1.4] z-10">
             Total supply <br /> <span className="font-normal">150,000,000</span>
           </p>
         </div>
