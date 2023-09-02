@@ -1,9 +1,33 @@
-import React, {useEffect,Suspense } from "react";
-import Doughnut from './DoughnutChart'
+import React, {useState, useEffect,Suspense } from "react";
+import { Player, ControlBar, LoadingSpinner, BigPlayButton } from 'video-react';
+import "/node_modules/video-react/dist/video-react.css"; 
+
 
 const Tokenomics = () => {
+  const [videoSource, setVideoSource] = useState('');
+
   useEffect(() => {
-}, []);
+    // Function to update the video source based on screen width
+    const updateVideoSource = () => {
+      if (window.innerWidth > 650) {
+        setVideoSource("../videos/Pie_Chart_Assy.mp4");
+      } else {
+        setVideoSource("../videos/Pie_Chart_Assy_Mobile.mp4");
+      }
+    };
+
+    // Call the function initially to set the initial video source
+    updateVideoSource();
+
+    // Add a resize event listener to update the video source when the screen size changes
+    window.addEventListener('resize', updateVideoSource);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', updateVideoSource);
+    };
+  }, []);
+  
   return (
     <section
       id="tokenomics"
@@ -18,7 +42,16 @@ const Tokenomics = () => {
             Total supply <br /> <span className="font-normal">150,000,000</span>
           </p>
         </div>
-          <Doughnut/>
+          <Player
+        playsInline
+        fluid 
+        autoPlay
+        muted
+        src={videoSource}>
+          <LoadingSpinner />
+        <ControlBar disabled={true}/>
+        <BigPlayButton disabled={true} />
+          </Player>
       {/* <img
           src="/pie-chart.png"
           className="w-full max-w-[600px] xl:max-w-[800px] 2xl:max-w-[1000px] object-contain"

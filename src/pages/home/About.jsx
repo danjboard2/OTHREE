@@ -153,7 +153,7 @@ function render() {
     <>
     <div id="pintext"></div>
     <section id="about" className="wrapper overflow-hidden">
-      <div className="grid min-h-[100vh] place-items-flex-start  w-full grid-cols-1 md:grid-cols-2 2xl:max-w-[1600px]">
+      <div className="grid min-h-0 md:min-h-[100vh] place-items-flex-start  w-full grid-cols-1 md:grid-cols-2 2xl:max-w-[1600px]">
         <div  className="flex px-4 sm:px-8  justify-center items-center w-full pt-10 sm:pt-14 pb-0 xl:py-14 lg:bg-white">
           <div id="intro" className="flex justify-start items-start flex-col gap-5">
             <h3 className="text-black font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[531px]">

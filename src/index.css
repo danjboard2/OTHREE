@@ -35,9 +35,13 @@ margin-top:-100px;
 .video-react {
   background-color: transparent !important;
 }
+#tokenomics .video-react {
+  padding-top: 40% !important;
+}
 @media only screen and (max-width:1500px){
 .bg-hero {
-  background-size: 1500px auto;
+    /* background-size: 1500px auto; */
+    background-position: 95% 50%;
 }
 }
 @media only screen and (max-width: 767px){
@@ -45,5 +49,9 @@ margin-top:-100px;
     padding-bottom: 0px;
     display:auto;
     height:100%;
+}
+.bg-hero {
+  /* background-size: 1500px auto; */
+  background-position: 82.5% 50%;
 }
 }

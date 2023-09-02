@@ -190,7 +190,6 @@ const TabDesc = ({ video, heading, desc, url }) => {
         playsInline
         fluid 
         autoPlay
-        preload
         muted
         src={video}>
           <LoadingSpinner />

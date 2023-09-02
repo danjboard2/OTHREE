@@ -160,7 +160,7 @@ function render() {
     <>
     <div id="pintext-partners"></div>
     <section id="partners" className="wrapper overflow-hidden">
-      <div className="grid min-h-[100vh] place-items-flex-start  w-full grid-cols-1 md:grid-cols-2 2xl:max-w-[1600px]">
+      <div className="grid min-h-0 md:min-h-[100vh] place-items-flex-start  w-full grid-cols-1 md:grid-cols-2 2xl:max-w-[1600px]">
         <div className="flex px-4  sm:px-8 bg-[rgb(24,24,24)] justify-center items-center w-full py-8 sm:py-14 xl:py-14">
           <div  id="partners-intro" className="flex justify-start items-start flex-col gap-5">
             <h3 className="text-white font-agency font-bold text-[30px] md:text-[40px] 2xl:text-[50px] uppercase xl:max-w-[550px] 2xl:max-w-[672px]">
@@ -176,7 +176,7 @@ function render() {
             </p>
             <Link
               to="/partners"
-              className="font-bold text-xl text-white flex justify-end items-center w-full gap-5"
+              className="font-bold text-xl text-white flex justify-end items-center w-full gap-5" id="pin-for-ecosys-scroll"
             >
               Our Partners
               <img
