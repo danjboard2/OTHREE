@@ -10,7 +10,7 @@ const Partners = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     //responsive
-let mm = gsap.matchMedia();
+      let mm = gsap.matchMedia();
 
     const context = gsap.context(() => {
       const timeline = gsap.timeline({
@@ -53,9 +53,9 @@ function sizeTheCanvas() {
   canvas.width  = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 }
-// setTimeout(() => {
+setTimeout(() => {
   sizeTheCanvas(canvas);
-// }, 300);
+ }, 200);
 
   const frameCount =230;
   const currentFrame = (index) =>
@@ -152,6 +152,8 @@ function render() {
   const [isVisible, setIsVisible] = useState(true);
  
   useEffect(() => {
+
+
   window.addEventListener("scroll" , () => {}, []) 
 
 })
