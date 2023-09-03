@@ -25,8 +25,8 @@ let mm = gsap.matchMedia();
           timeline.to(bulb, {
             frame: frameCount - 1,
             snap: "frame",
-            ease: "none",
             force3D:true,
+            ease: "none",
             scrollTrigger: {
               trigger: ".canvas-container",
               start: window.innerWidth > 1024 ? "top top" : "top bottom",
