@@ -29,7 +29,7 @@ const HomeHeader = () => {
         <div className="flex justify-start items-center gap-8 xl:gap-14">
           <Link to="/" onClick={() => window.scrollTo(0, 0)}>
             <img
-              src="/logo.svg"
+              src="/logo.png"
               className="object-contain w-[60px] lg:w-[75px]"
               alt=""
             />
