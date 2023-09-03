@@ -54,9 +54,7 @@ function sizeTheCanvas() {
   canvas.width  = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 }
-setTimeout(() => {
   sizeTheCanvas(canvas);
- }, 300);
 
   const frameCount =230;
   const currentFrame = (index) =>
