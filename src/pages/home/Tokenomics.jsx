@@ -48,7 +48,7 @@ const Tokenomics = () => {
         fluid 
         autoPlay
         muted
-        src="../videos/Pie_Chart_Assy_Mobile.mp4">
+        src={videoSource}>
           <LoadingSpinner />
         <ControlBar disabled={true}/>
         <BigPlayButton disabled={true} />
