@@ -64,9 +64,9 @@ const Platform = () => {
     canvas.width  = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
   }
-  //setTimeout(() => {
+  setTimeout(() => {
     sizeTheCanvas(canvas);
-//}, 100);
+}, 100);
 
   const frameCount =348;
   const currentFrame = (index) =>
