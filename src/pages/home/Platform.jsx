@@ -35,7 +35,6 @@ const Platform = () => {
           frame: frameCount - 1,
           snap: "frame",
           ease: "none",
-          force3D:true,
           scrollTrigger: {
             trigger: "#pin-for-ecosys-scroll",
             end: window.innerWidth > 1024 ?  "+=1300px" : "+=600px",

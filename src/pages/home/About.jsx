@@ -116,7 +116,7 @@ let render = images[0].onload = () => {
   let scaleFactor = Math.max(canvas.width / loadedImageWidth, canvas.height / loadedImageHeight);
   
     // Finding the new width and height based on the scale factor
-    let newWidth = loadedImageWidth* scaleFactor;
+    let newWidth = loadedImageWidth * scaleFactor;
     let newHeight = loadedImageHeight * scaleFactor;
     // get the top left position of the image
     // in order to center the image within the canvas
