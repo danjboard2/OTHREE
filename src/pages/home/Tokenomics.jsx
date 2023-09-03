@@ -43,6 +43,7 @@ const Tokenomics = () => {
           </p>
         </div>
           <Player
+           style={{ pointerEvents: 'none' }}
         playsInline
         fluid 
         autoPlay
