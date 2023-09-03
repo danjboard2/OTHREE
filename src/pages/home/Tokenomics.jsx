@@ -12,7 +12,7 @@ const Tokenomics = () => {
       if (window.innerWidth > 650) {
         setVideoSource("../videos/Pie_Chart_Assy.mp4");
       } else {
-        setVideoSource("../videos/Pie_Chart_Assy_Mobile.mp4");
+        setVideoSource("../videos/Pie_Chart_Assy_Mobile.mov");
       }
     };
 
