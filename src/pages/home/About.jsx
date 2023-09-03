@@ -26,6 +26,7 @@ let mm = gsap.matchMedia();
             frame: frameCount - 1,
             snap: "frame",
             ease: "none",
+            force3D:true,
             scrollTrigger: {
               trigger: ".canvas-container",
               start: window.innerWidth > 1024 ? "top top" : "top bottom",

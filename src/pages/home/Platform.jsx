@@ -36,6 +36,7 @@ const Platform = () => {
           snap: "frame",
           ease: "none",
           scrollTrigger: {
+            force3D:true,
             trigger: "#pin-for-ecosys-scroll",
             end: window.innerWidth > 1024 ?  "+=1300px" : "+=600px",
             start: window.innerWidth > 1024 ? "top top" : "top top",
