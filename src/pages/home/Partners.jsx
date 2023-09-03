@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 const Partners = () => {
 
   
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     //responsive

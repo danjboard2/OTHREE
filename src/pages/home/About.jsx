@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 const About = () => {
 
   
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 //responsive
 let mm = gsap.matchMedia();
