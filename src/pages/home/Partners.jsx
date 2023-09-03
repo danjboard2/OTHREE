@@ -26,7 +26,7 @@ const Partners = () => {
             frame: frameCount - 1,
             snap: "frame",
             ease: "none",
-            immediateRender: false,
+                        immediateRender: false,
             scrollTrigger: {
               trigger: ".canvas-container-partner",
               start: window.innerWidth > 1024 ? "top top" : "top bottom",
