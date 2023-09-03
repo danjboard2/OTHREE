@@ -28,6 +28,9 @@ height: 100vh;
 position: relative;
 margin-top:-100px;
 }
+video::-internal-media-controls-overlay-cast-button {
+  display: none;
+}
 .video-wrap {
   position: relative;
   padding-bottom: 50.25%;
