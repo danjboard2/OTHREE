@@ -57,7 +57,7 @@ fitToContainer(canvas);
   }
   setTimeout(() => {
     sizeTheCanvas(canvas);
-}, 200);
+}, 300);
 
   const frameCount =115;
   const currentFrame = (index) =>

@@ -55,7 +55,7 @@ function sizeTheCanvas() {
 }
 setTimeout(() => {
   sizeTheCanvas(canvas);
- }, 200);
+ }, 300);
 
   const frameCount =230;
   const currentFrame = (index) =>
