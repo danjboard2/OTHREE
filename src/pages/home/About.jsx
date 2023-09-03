@@ -2,14 +2,13 @@ import React, { useState,useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
+gsap.registerPlugin(ScrollTrigger);
+let mm = gsap.matchMedia();
 
 const About = () => {
-
-  
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
 //responsive
-let mm = gsap.matchMedia();
+
 
     const context = gsap.context(() => {
       const timeline = gsap.timeline({
@@ -59,7 +58,7 @@ fitToContainer(canvas);
   }
   setTimeout(() => {
     sizeTheCanvas(canvas);
-}, 200);
+}, 100);
 
   const frameCount =115;
   const currentFrame = (index) =>
@@ -75,11 +74,9 @@ fitToContainer(canvas);
   };
   
   for (let i = 0; i < frameCount; i++) {
- new Promise(resolve => {
     const img = new Image();
     img.src = currentFrame(i);
     images.push(img);
-  })
   }
   
 
@@ -127,7 +124,7 @@ let render = images[0].onload = () => {
     // When drawing the image, we have to scale down the image
     // width and height in order to fit within the canvas
     context.drawImage(img, x, y, newWidth, newHeight);
-};
+}; 
 
 // Now that we have set up the image "onload" handeler, we can assign
 // an image URL to the image.
@@ -145,7 +142,6 @@ function render() {
     };
   }, []);
 
-  const [isVisible, setIsVisible] = useState(true);
  
   useEffect(() => {
   window.addEventListener("scroll" , () => {}, []) 

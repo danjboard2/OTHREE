@@ -1,4 +1,4 @@
-import React, {useState, useEffect,Suspense } from "react";
+import {useState, useEffect } from "react";
 import { Player, ControlBar, LoadingSpinner, BigPlayButton } from 'video-react';
 import "/node_modules/video-react/dist/video-react.css"; 
 

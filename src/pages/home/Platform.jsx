@@ -64,9 +64,9 @@ const Platform = () => {
     canvas.width  = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
   }
-  setTimeout(() => {
+  //setTimeout(() => {
     sizeTheCanvas(canvas);
-}, 200);
+//}, 100);
 
   const frameCount =348;
   const currentFrame = (index) =>
@@ -82,11 +82,9 @@ const Platform = () => {
   };
   
   for (let i = 0; i < frameCount; i++) {
-    new Promise(resolve => {
     const img = new Image();
     img.src = currentFrame(i);
     images.push(img);
-  })
   }
   
     const timeline2 = gsap.timeline({

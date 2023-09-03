@@ -15,8 +15,12 @@
     @apply flex justify-start items-center flex-col w-full;
   }
   html {
-    @apply scroll-smooth scroll-pt-[140px];
+    @apply /* scroll-smooth */ scroll-pt-[140px];
   }
+}
+
+html body.smooth {
+  scroll-behavior: smooth;
 }
 
 .parallaxhero{
