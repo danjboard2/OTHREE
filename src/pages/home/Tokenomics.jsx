@@ -10,7 +10,7 @@ const Tokenomics = () => {
     // Function to update the video source based on screen width
     const updateVideoSource = () => {
       if (window.innerWidth > 650) {
-        setVideoSource("../videos/Pie_Chart_Assy.mp4");
+        setVideoSource("../videos/Pie_Chart_Assy.mov");
       } else {
         setVideoSource("../videos/Pie_Chart_Assy_Mobile.mov");
       }
@@ -43,6 +43,7 @@ const Tokenomics = () => {
           </p>
         </div>
           <Player
+           style={{ pointerEvents: 'none' }}
         playsInline
         fluid 
         autoPlay
